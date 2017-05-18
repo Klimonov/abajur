@@ -1,0 +1,181 @@
+@orange: #e54c2a;
+@grey: #f1f1f1;
+
+@font-face {
+  font-family: "Philosopher-Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Philosopher-Regular.eot");
+  src: url("../fonts/Philosopher-Regular.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/Philosopher-Regular.woff") format("woff"), 
+  url("../fonts/Philosopher-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "GoodVibesPro";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/GoodVibesPro.eot");
+  src: url("../fonts/GoodVibesPro.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/GoodVibesPro.woff") format("woff"), 
+  url("../fonts/GoodVibesPro.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "roboto";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/RobotoRegular.woff") format("woff"), 
+  url("../fonts/RobotoRegular.ttf") format("truetype"); }
+
+body {
+	margin: 0;
+	font-family: Philosopher-Regular, Arial, sans-serif;
+	background-color: @grey;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	color: @orange!important;
+	text-decoration: underline;
+}
+h2 {
+	font-family: GoodVibesPro;
+}
+
+/*header*/
+header {
+	background-color: white;
+	.header-line {
+		width: 100%;
+		background-color: @orange;
+		height: 4px;
+		}
+	.row {
+		width: 100%;
+		height: 80px;
+		.logo {
+			background: url(../img/logo.png);
+			width: 150px;
+			height: 150px;
+			margin-left: 256px;
+			float: left;
+			margin-top: -30px;
+			}
+		/*навигация*/
+		ul {
+			list-style: none;
+			margin-top: 31px;
+			margin-right: 147px;
+			.active>a {
+				color: @orange;
+				text-decoration: underline;
+				}
+			li {
+				float: right;
+				font-size: 20px;
+				text-transform: uppercase;
+				margin-right: 37px;
+				a {
+					color: black;
+				}
+			}
+		}
+	}
+}
+/*конец header*/
+
+/*слайдер*/
+section {
+	margin-top: -30px;
+	.slider {
+		max-width: 100%;
+		height: 348px;
+		background: url(../img/slider.jpg);
+		border-bottom: 4px solid @orange;
+		h1 {
+			font-family: GoodVibesPro!important;
+			color: #fff;
+			font-size: 75px;
+			font-weight: 100;
+			margin-top: 120px;
+			margin-left: 120px;
+			display: inline-block;
+			letter-spacing: -3px;
+		}
+	}
+}
+/*конец слайдер */
+
+/*content*/
+.content {
+	width: 890px;
+	height: 1335px;
+	border: 1px solid @grey;
+	margin-top: 80px;
+	margin-left: 270px;
+	.veranda, .karaoke, .family {
+		border: 1px solid @grey;
+		height: 443px;
+		position: relative;;
+		 div:first-child {
+			margin-top: 67px;
+			width: 490px;
+			height: 315px;
+			background-color: #fff;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	.veranda-img {
+		background: url(../img/section1.jpg);
+		width: 487px;
+		height: 317px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.karaoke-img {
+		background: url(../img/section2.jpg);
+		width: 487px;
+		height: 317px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.family-img {
+		background: url(../img/section3.jpg);
+		width: 487px;
+		height: 317px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	h2 {
+		display: inline-block;
+		margin: 20px 0 0 30px;
+		font-size: 40px;
+		font-weight: 100;
+	}
+	p {
+		margin-left: 30px;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	button {
+		background-color: @orange;
+		border: none;;
+		color: #fff;
+		width: 310px;
+		height: 43px;
+		margin-top: 20px;
+		margin-left: 90px;
+		font-size: 16px;
+		cursor: pointer;
+	}
+}
+/*конец content*/
+
+/*footer*/
