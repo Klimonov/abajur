@@ -6,13 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Наши залы</title>
 		<link href="css/klimstyle.css" rel="stylesheet">
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/main.js"></script>
 	</head>
 	<body>
 	<!-- header -->
 		<header>
-			<div class="header-line"></div>
+			<div class="header-line" id="scroll"></div>
 			<div class="row">
 				<div class="logo"></div>
 				<ul>
@@ -29,7 +29,7 @@
 	<!-- слайдер -->
 		<section>
 			<div class="row">
-				<div class="slider"><h1>Наши залы</h1></div>
+				<div class="slider-halls"><h1>Наши залы</h1></div>
 				
 			</div>
 		</section>
@@ -52,7 +52,7 @@
 					<h2>Зал караоке</h2>
 					<p>Описание зала в несколько абзацев, раскрывающее все плюсы для посетителей, расположение столиков, а также информация о том, как забронировать место на ужин.</p>
 					<p>Описание зала в несколько абзацев, раскрывающее все плюсы для посетителей.</p>
-					<button>Открыть</button>
+					<a href=""><button>Открыть</button></a>
 				</div>
 				<div class="karaoke-img"></div>
 			</div>
@@ -61,7 +61,7 @@
 					<h2>Семейный зал</h2>
 					<p>Описание зала в несколько абзацев, раскрывающее все плюсы для посетителей, расположение столиков, а также информация о том, как забронировать место на ужин.</p>
 					<p>Описание зала в несколько абзацев, раскрывающее все плюсы для посетителей.</p>
-					<button>Открыть</button>
+					<a href=""><button>Открыть</button></a>
 				</div>
 				<div class="family-img"></div>
 			</div>
@@ -107,15 +107,14 @@
 					<h4>Контакты</h4>
 					<p>адрес: г. Ставрополь, ул. Кулакова, 27а<br>(ТЦ "Проспект", 5-й этаж)<br>тел.: +7 (8652) 68‒21‒21, <br>+7‒905‒462‒74‒40, <br>+7‒909‒757‒56‒73</p>
 				</div>
+					<!-- стрелка  -->
+				<div class="scroll-up"></div>
+					<!-- конец Стрелка -->
 			</div>
+
 		</footer>
 	<!-- конец footer -->
 
-	<!-- стрелка  -->
-		<a id="scrollUp" href="#top">
-			
-		</a>
-	<!-- конец Стрелка -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 	</body>
 </html>
