@@ -35,6 +35,9 @@ a:hover {
 h2 {
   font-family: GoodVibesPro;
 }
+.clear {
+  clear: both;
+}
 /*header*/
 header {
   background-color: white;
@@ -42,7 +45,7 @@ header {
 header .header-line {
   width: 100%;
   background-color: #e54c2a;
-  height: 4px;
+  height: 5px;
 }
 header .row {
   width: 100%;
@@ -51,15 +54,15 @@ header .row {
 }
 header .row .logo {
   background: url(../img/logo.png);
-  width: 150px;
-  height: 150px;
-  margin-left: 256px;
+  width: 176px;
+  height: 176px;
+  margin-left: 290px;
   float: left;
-  margin-top: -30px;
+  margin-top: -48px;
 }
 header .row ul {
   list-style: none;
-  margin-top: 31px;
+  margin-top: 45px;
   margin-right: 147px;
 }
 header .row ul .active > a {
@@ -82,66 +85,67 @@ section {
 }
 section .slider {
   max-width: 100%;
-  height: 348px;
+  height: 415px;
   background: url(../img/slider.jpg);
   border-bottom: 4px solid #e54c2a;
 }
 section .slider h1 {
   font-family: GoodVibesPro!important;
   color: #fff;
-  font-size: 75px;
+  font-size: 85px;
   font-weight: 100;
-  margin-top: 120px;
-  margin-left: 120px;
+  margin-top: 140px;
+  float: right;
+  margin-right: 39%;
   display: inline-block;
   letter-spacing: -3px;
 }
 /*конец слайдер */
 /*content*/
 .content {
-  width: 890px;
-  height: 1335px;
-  border: 1px solid #f1f1f1;
-  margin-top: 80px;
-  margin-left: 270px;
+  float: right;
+  width: 1055px;
+  height: 1510px;
+  margin-top: 95px;
+  margin-right: 13.5%;
 }
 .content .veranda,
 .content .karaoke,
 .content .family {
   border: 1px solid #f1f1f1;
-  height: 443px;
+  height: 530px;
   position: relative;
 }
 .content .veranda div:first-child,
 .content .karaoke div:first-child,
 .content .family div:first-child {
-  margin-top: 67px;
-  width: 490px;
-  height: 315px;
+  margin-top: 80px;
+  width: 580px;
+  height: 375px;
   background-color: #fff;
   position: relative;
   z-index: 1;
 }
 .content .veranda-img {
   background: url(../img/section1.jpg);
-  width: 487px;
-  height: 317px;
+  width: 590px;
+  height: 381px;
   position: absolute;
   top: 0;
   right: 0;
 }
 .content .karaoke-img {
   background: url(../img/section2.jpg);
-  width: 487px;
-  height: 317px;
+  width: 590px;
+  height: 381px;
   position: absolute;
   top: 0;
   right: 0;
 }
 .content .family-img {
   background: url(../img/section3.jpg);
-  width: 487px;
-  height: 317px;
+  width: 590px;
+  height: 381px;
   position: absolute;
   top: 0;
   right: 0;
@@ -149,24 +153,95 @@ section .slider h1 {
 .content h2 {
   display: inline-block;
   margin: 20px 0 0 30px;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 100;
 }
 .content p {
   margin-left: 30px;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 25px;
 }
 .content button {
   background-color: #e54c2a;
   border: none;
   color: #fff;
-  width: 310px;
-  height: 43px;
-  margin-top: 20px;
-  margin-left: 90px;
-  font-size: 16px;
+  width: 365px;
+  height: 50px;
+  margin-top: 13px;
+  margin-left: 105px;
+  font-size: 20px;
   cursor: pointer;
 }
 /*конец content*/
 /*footer*/
+footer {
+  margin-top: 90px;
+  height: 313px;
+  border-top: 5px solid #e54c2a;
+  border-bottom: 39px solid #e54c2a;
+}
+footer h4 {
+  font-size: 30px;
+  color: #333333;
+}
+footer p {
+  font-size: 12px;
+}
+footer .row {
+  margin-top: 35px;
+  margin-right: 18%;
+}
+footer .row div {
+  float: right;
+  margin-right: 45px;
+}
+footer .footer-food {
+  width: 222px;
+  height: 136px;
+  margin-right: 6px!important;
+}
+footer .footer-food ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-food ul li img:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: .45;
+}
+#scrollUp {
+  position: fixed;
+  display: inline;
+  background: url(../img/arrow.png);
+  bottom: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 40px;
+  line-height: 37px;
+  right: 30px;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(315deg);
+  width: 40px;
+  box-sizing: border-box;
+}
+#scrollUp a {
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#scrollUp img {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(55deg);
+  display: inline;
+}

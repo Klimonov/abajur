@@ -44,6 +44,9 @@ a:hover {
 h2 {
 	font-family: GoodVibesPro;
 }
+.clear {
+	clear: both;
+}
 
 /*header*/
 header {
@@ -51,23 +54,23 @@ header {
 	.header-line {
 		width: 100%;
 		background-color: @orange;
-		height: 4px;
+		height: 5px;
 		}
 	.row {
 		width: 100%;
 		height: 80px;
 		.logo {
 			background: url(../img/logo.png);
-			width: 150px;
-			height: 150px;
-			margin-left: 256px;
+			width: 176px;
+			height: 176px;
+			margin-left: 290px;
 			float: left;
-			margin-top: -30px;
+			margin-top: -48px;
 			}
 		/*навигация*/
 		ul {
 			list-style: none;
-			margin-top: 31px;
+			margin-top: 45px;
 			margin-right: 147px;
 			.active>a {
 				color: @orange;
@@ -92,16 +95,17 @@ section {
 	margin-top: -30px;
 	.slider {
 		max-width: 100%;
-		height: 348px;
+		height: 415px;
 		background: url(../img/slider.jpg);
 		border-bottom: 4px solid @orange;
 		h1 {
 			font-family: GoodVibesPro!important;
 			color: #fff;
-			font-size: 75px;
+			font-size: 85px;
 			font-weight: 100;
-			margin-top: 120px;
-			margin-left: 120px;
+			margin-top: 140px;
+			float: right;
+			margin-right: 39%;
 			display: inline-block;
 			letter-spacing: -3px;
 		}
@@ -111,19 +115,19 @@ section {
 
 /*content*/
 .content {
-	width: 890px;
-	height: 1335px;
-	border: 1px solid @grey;
-	margin-top: 80px;
-	margin-left: 270px;
+	float: right;
+	width: 1055px;
+	height: 1510px;
+	margin-top: 95px;
+	margin-right: 13.5%;
 	.veranda, .karaoke, .family {
 		border: 1px solid @grey;
-		height: 443px;
+		height: 530px;
 		position: relative;;
 		 div:first-child {
-			margin-top: 67px;
-			width: 490px;
-			height: 315px;
+			margin-top: 80px;
+			width: 580px;
+			height: 375px;
 			background-color: #fff;
 			position: relative;
 			z-index: 1;
@@ -131,24 +135,24 @@ section {
 	}
 	.veranda-img {
 		background: url(../img/section1.jpg);
-		width: 487px;
-		height: 317px;
+		width: 590px;
+		height: 381px;
 		position: absolute;
 		top: 0;
 		right: 0;
 	}
 	.karaoke-img {
 		background: url(../img/section2.jpg);
-		width: 487px;
-		height: 317px;
+		width: 590px;
+		height: 381px;
 		position: absolute;
 		top: 0;
 		right: 0;
 	}
 	.family-img {
 		background: url(../img/section3.jpg);
-		width: 487px;
-		height: 317px;
+		width: 590px;
+		height: 381px;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -156,26 +160,102 @@ section {
 	h2 {
 		display: inline-block;
 		margin: 20px 0 0 30px;
-		font-size: 40px;
+		font-size: 50px;
 		font-weight: 100;
 	}
 	p {
 		margin-left: 30px;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 18px;
+		line-height: 25px;
 	}
 	button {
 		background-color: @orange;
 		border: none;;
 		color: #fff;
-		width: 310px;
-		height: 43px;
-		margin-top: 20px;
-		margin-left: 90px;
-		font-size: 16px;
+		width: 365px;
+		height: 50px;
+		margin-top: 13px;
+		margin-left: 105px;
+		font-size: 20px;
 		cursor: pointer;
 	}
 }
 /*конец content*/
 
 /*footer*/
+footer {
+	margin-top: 90px;
+	height: 313px;
+	border-top: 5px solid @orange;
+	border-bottom: 39px solid @orange;
+		h4 {
+			font-size: 30px;
+			color: #333333
+		}
+		p {
+			font-size: 12px;
+		}
+		.row {
+			margin-top: 35px;
+			margin-right: 18%;
+			div {
+				float: right;
+				margin-right: 45px;
+			}
+	}
+	.footer-food {
+
+		width: 222px;
+		height: 136px;
+		margin-right: 6px!important;
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			li {
+				img:hover {
+					  -webkit-transition: all 0.3s ease;
+					  -moz-transition: all 0.3s ease;
+					  -o-transition: all 0.3s ease;
+					  transition: all 0.3s ease;
+					opacity: .45;
+				}
+			}
+		}
+	}
+}
+#scrollUp {
+		position: fixed;
+		display: inline;
+    // z-index: 9 !important;
+    background: url(../img/arrow.png);
+    bottom: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    // font-size: 28px;
+    height: 40px;
+    line-height: 37px;
+    right: 30px;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(315deg);
+    width: 40px;
+    box-sizing: border-box;
+    a {
+    text-decoration: none;
+    outline: none;
+		-webkit-transition: all 0.3s ease;
+	  -moz-transition: all 0.3s ease;
+	  -o-transition: all 0.3s ease;
+	  transition: all 0.3s ease;
+	}
+	  img {
+	  -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(55deg);
+    display: inline;
+	  }
+}
