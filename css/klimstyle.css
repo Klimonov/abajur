@@ -174,6 +174,10 @@ section .slider-menu h1 {
 .content-menu .list li div {
   float: left;
 }
+.content-menu .list li input {
+  width: 20px;
+  text-align: center;
+}
 .content {
   /*float: right;*/
   /*outline: 1px solid;*/
