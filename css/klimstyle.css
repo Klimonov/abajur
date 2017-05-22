@@ -40,6 +40,9 @@ h2 {
 .clear {
   clear: both;
 }
+ul {
+  list-style: none;
+}
 /*header*/
 header {
   background-color: white;
@@ -51,21 +54,31 @@ header .header-line {
 }
 header .row {
   width: 100%;
-  height: 85px;
+  height: 80px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
   /*навигация*/
 }
 header .row .logo {
   background: url(../img/logo.png);
   width: 150px;
   height: 150px;
-  margin-left: 270px;
-  float: left;
-  margin-top: -30px;
+  margin-top: -5px;
+  z-index: 199!important;
+  /*margin-right: 28px;*/
 }
 header .row ul {
   list-style: none;
+  z-index: 10;
   margin-top: 25px;
-  margin-right: 147px;
+  padding-left: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  /*margin-right: 195px;*/
 }
 header .row ul .active > a {
   color: #e54c2a;
@@ -74,7 +87,6 @@ header .row ul .active > a {
   padding-bottom: 3px;
 }
 header .row ul li {
-  float: right;
   font-size: 20px;
   text-transform: uppercase;
   margin-right: 37px;
@@ -84,109 +96,279 @@ header .row ul li a {
 }
 /*конец header*/
 /*слайдер*/
-section {
-  margin-top: -30px;
+article {
+  /*margin-top: -30px;*/
 }
-section .slider-halls {
+article .slider-halls {
   background: url(../img/slider-hall.jpg);
 }
-section .slider-menu {
+article .slider-menu {
   /*Наше меню*/
   background: url(../img/slider-menu.jpg);
 }
-section .slider-halls,
-section .slider-menu {
+article .slider-halls,
+article .slider-menu {
   /*Наше меню*/
   max-width: 100%;
   height: 415px;
+  display: flex;
+  display: -webkit-flex;
   border-bottom: 4px solid #e54c2a;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
 }
-section .slider-halls h1,
-section .slider-menu h1 {
+article .slider-halls h1,
+article .slider-menu h1 {
   font-family: GoodVibesPro!important;
   color: #fff;
   font-size: 75px;
   font-weight: 100;
-  margin-top: 120px;
-  margin-left: 120px;
-  /*float: right;*/
+  margin-top: 150px;
   text-align: center;
-  /*margin-right: 39%;*/
-  display: inline-block;
   letter-spacing: -3px;
 }
 /*конец слайдер */
+.bgcolor {
+  background-color: #fff;
+}
 /*content*/
+.section-menu {
+  background-color: #fff!important;
+  padding-top: 85px;
+  height: 615px;
+}
 .content-menu {
   /*Наше меню*/
-  width: 900px;
+  max-width: 900px;
   height: 615px;
-  margin-top: 85px;
-  outline: 1px solid;
+  /*	margin-top: 85px;*/
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  display: -webkit-flex;
 }
 .content-menu .red-menu {
-  float: left;
   width: 225px;
   height: 540px;
   background: #e54c2a;
   margin-left: 18px;
+}
+.content-menu .red-menu a {
+  color: #f1f1f1;
+  border-bottom: 1px solid #bebebe;
+  font-size: 14px;
+  padding-bottom: 8px;
+  width: 100%;
+  display: inline-block;
+}
+.content-menu .red-menu a:hover {
+  color: #691e0d !important;
 }
 .content-menu .red-menu .pizza {
   background: url(../img/menu-pizza.jpg);
   width: 210px;
   height: 140px;
   margin: 7px;
-  display: inline-block;
 }
-.content-menu ul {
+.content-menu .red-menu ul {
   margin-top: 0px;
-  list-style: none;
   padding-left: 13px;
   padding-right: 13px;
 }
-.content-menu ul li {
+.content-menu .red-menu ul li {
   padding-top: 5px;
 }
-.content-menu ul li:last-child a {
+.content-menu .red-menu ul li:last-child a {
   border-bottom: none;
 }
-.content-menu ul a {
-  color: #f1f1f1;
-  border-bottom: 1px solid #bebebe;
-  font-size: 14px;
-  /*padding-top: 10px;*/
-  padding-bottom: 8px;
-  width: 100%;
-  /*outline: 1px solid black;*/
-  display: inline-block;
-}
-.content-menu ul a:hover {
-  color: #a4a4a4 !important;
-  /*border-bottom: none;*/
-}
 .content-menu .list {
-  float: left;
-  outline: 2px solid red;
   width: 655px;
 }
-.content-menu .list li div {
-  float: left;
+.content-menu .list h4 {
+  margin-bottom: 0;
 }
-.content-menu .list li input {
-  width: 20px;
+.content-menu .list p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #585858;
+}
+.content-menu .list .list-price {
+  /*				display: flex; место для выравнивание цен!!!
+				justify-content: space-between;*/
+}
+.content-menu .list .list-price p {
+  margin-left: 110px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.content-menu .list .list-price p span {
+  color: #e54c2a;
+  margin-left: 30px;
+}
+.content-menu .list ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+.content-menu .list ul li:last-child {
+  border-bottom: none;
+}
+.content-menu .list ul li {
+  margin: 0 30px;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  border-bottom: 1px solid #bebebe;
+}
+.content-menu .list ul li .calc > a {
+  font-size: 28px;
+  font-weight: 600;
+  color: #8b8b8b;
+  border: none;
+}
+.content-menu .list ul li input {
+  height: 30px;
+  width: 35px;
+  font-size: 24px;
   text-align: center;
+  margin-bottom: 16px;
+  color: #585858;
+  background-color: #d8d8d8;
+  border: 1px solid #a4a4a4;
 }
-.content {
-  /*float: right;*/
-  /*outline: 1px solid;*/
-  width: 950px;
-  height: 1510px;
-  margin-top: 95px;
-  /*margin-right: 13.5%;*/
+/*расчет - наше меню*/
+.raschet {
+  max-width: 890px;
+  height: 315px;
   margin-right: auto;
   margin-left: auto;
+}
+.raschet h2 {
+  font-size: 42px;
+  font-weight: 100;
+  margin-top: 0;
+  padding-top: 45px;
+  text-align: center;
+  color: #3f3f3f;
+}
+.raschet .buttons {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.raschet .buttons .row-button {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.raschet .buttons .button {
+  width: 350px;
+  height: 50px;
+  border: 1px solid #8b8b8b;
+  margin-bottom: 20px;
+  font-weight: 600;
+  padding-left: 40px;
+}
+.raschet .buttons .button p {
+  margin-top: 15px;
+  position: relative;
+}
+.raschet .buttons .button span {
+  color: #e54c2a;
+  right: 25px;
+  top: -5px;
+  font-size: 25px;
+  position: absolute;
+}
+.raschet .buttons .itogo {
+  width: 390px;
+  height: 50px;
+  padding-left: 0;
+}
+.raschet .buttons .itogo p {
+  margin-top: 15px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.raschet .buttons .itogo p span {
+  color: #e54c2a;
+}
+/*конец Расчет - наше меню*/
+/*заявка - наше меню*/
+.row-zayavka {
+  background-color: #fff;
+}
+.zayavka {
+  height: 410px;
+  width: 885px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.zayavka h2 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 100;
+  color: #3f3f3f;
+  margin-bottom: 0;
+}
+.zayavka p {
+  text-align: center;
+}
+.zayavka .inputs {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin-top: 70px;
+}
+.zayavka .inputs input {
+  width: 280px;
+  height: 40px;
+  border: 1px solid #a4a4a4;
+  font-size: 16px;
+  color: #000000;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.zayavka button {
+  display: block;
+  background-color: #e54c2a;
+  border: none;
+  color: #fff;
+  width: 280px;
+  height: 40px;
+  margin-top: 43px;
+  margin-left: 105px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+.zayavka button:hover {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: .85;
+}
+.content {
+  /*наши залы*/
+  max-width: 950px;
+  margin-top: 95px;
+  margin-right: auto;
+  margin-left: auto;
+  /*наши залы*/
+  height: 1600px;
 }
 .content .veranda,
 .content .karaoke,
@@ -233,7 +415,7 @@ section .slider-menu h1 {
   margin-left: 30px;
   font-size: 18px;
   line-height: 25px;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 .content a:hover {
   border-bottom: none!important;
@@ -260,7 +442,6 @@ section .slider-menu h1 {
 /*footer*/
 footer {
   position: relative;
-  margin-top: 90px;
   height: 313px;
   border-top: 5px solid #e54c2a;
   border-bottom: 39px solid #e54c2a;
@@ -277,13 +458,27 @@ footer .row {
   margin-top: 35px;
   margin-right: auto;
   margin-left: auto;
-  /*outline: 1px solid;*/
+  /*outline: 2px solid;*/
   height: 100%;
-  width: 1000px;
+  max-width: 950px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
 }
-footer .row div {
-  float: right;
-  margin-right: 45px;
+footer .row .gallery {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+footer .row .footer-img {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
 }
 footer .footer-food {
   width: 222px;
@@ -295,7 +490,9 @@ footer .footer-food ul {
   margin: 0;
   list-style: none;
   display: flex;
+  display: -webkit-flex;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
 }
 footer .footer-food ul li img:hover {
   -webkit-transition: all 0.3s ease;
@@ -306,21 +503,21 @@ footer .footer-food ul li img:hover {
 }
 /*скролл*/
 .scroll-up {
-  position: absolute;
+  position: fixed;
   display: inline;
   background: url(../img/arrow.png);
-  bottom: 18px;
   color: #ffffff;
   cursor: pointer;
   height: 40px;
   line-height: 37px;
   right: 30px;
-  bottom: -20px;
+  bottom: 18px;
   text-align: center;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   width: 40px;
   box-sizing: border-box;
+  display: none;
 }
 /*конец Скролл*/

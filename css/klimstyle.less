@@ -49,6 +49,9 @@ h2 {
 .clear {
 	clear: both;
 }
+ul {
+	list-style: none;
+}
 
 /*header*/
 header {
@@ -60,20 +63,30 @@ header {
 		}
 	.row {
 		width: 100%;
-		height: 85px;
+		height: 80px;
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-around;
+		-webkit-justify-content: space-around;
+		/*навигация*/
 		.logo {
 			background: url(../img/logo.png);
 			width: 150px;
 			height: 150px;
-			margin-left: 270px;
-			float: left;
-			margin-top: -30px;
+			margin-top: -5px;
+			z-index: 199!important;
+			/*margin-right: 28px;*/
 			}
-		/*навигация*/
 		ul {
 			list-style: none;
+			z-index: 10;
 			margin-top: 25px;
-			margin-right: 147px;
+			padding-left: 0;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
+			/*margin-right: 195px;*/
 			.active>a {
 				color: @orange;
 				text-decoration: none;
@@ -81,7 +94,6 @@ header {
 				padding-bottom: 3px;
 				}
 			li {
-				float: right;
 				font-size: 20px;
 				text-transform: uppercase;
 				margin-right: 37px;
@@ -95,8 +107,8 @@ header {
 /*конец header*/
 
 /*слайдер*/
-section {
-	margin-top: -30px;
+article {
+	/*margin-top: -30px;*/
 	.slider-halls {
 		background: url(../img/slider-hall.jpg);
 	}
@@ -106,50 +118,64 @@ section {
 	.slider-halls, .slider-menu { /*Наше меню*/
 		max-width: 100%;
 		height: 415px;
-		
+		display: flex;
+		display: -webkit-flex;
 		border-bottom: 4px solid @orange;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
 		h1 {
 			font-family: GoodVibesPro!important;
 			color: #fff;
 			font-size: 75px;
 			font-weight: 100;
-			margin-top: 120px;
-			margin-left: 120px;
-			/*float: right;*/
+			margin-top: 150px;
 			text-align: center;
-			/*margin-right: 39%;*/
-			display: inline-block;
 			letter-spacing: -3px;
 		}
 	}
 }
 /*конец слайдер */
-
+.bgcolor {
+	background-color: #fff;
+}
 /*content*/
+.section-menu {
+		background-color: #fff!important;
+		padding-top: 85px;
+		height: 615px;
+}
 .content-menu { /*Наше меню*/
-	width: 900px;
+	max-width: 900px;
 	height: 615px;
-	margin-top: 85px;
-	outline: 1px solid;
+/*	margin-top: 85px;*/
 	margin-right: auto;
 	margin-left: auto;
+	display: flex;
+	display: -webkit-flex;
 	.red-menu {
-		float: left;
 		width: 225px;
 		height: 540px;
 		background: @orange;
 		margin-left: 18px;
+		a {
+			color: @grey;
+			border-bottom: 1px solid darken(@grey, 20%);
+			font-size: 14px;
+			padding-bottom: 8px;
+			width: 100%;
+			display: inline-block;
+		}
+		a:hover {
+			color: darken(@orange, 30%)!important;
+		}
 		.pizza {
 			background: url(../img/menu-pizza.jpg);
 			width: 210px;
 			height: 140px;
 			margin: 7px;
-			display: inline-block;
 		}
-	}
-	ul {
+			ul {
 		margin-top: 0px;
-		list-style: none;
 		padding-left: 13px;
 		padding-right: 13px;
 		li {
@@ -158,49 +184,199 @@ section {
 		li:last-child a{
 			border-bottom: none;
 		}
-		a {
-			color: @grey;
-			border-bottom: 1px solid darken(@grey, 20%);
-			font-size: 14px;
-			/*padding-top: 10px;*/
-			padding-bottom: 8px;
-			width: 100%;
-			/*outline: 1px solid black;*/
-			display: inline-block;
-		}
-		a:hover {
-			color: darken(@grey, 30%)!important;
-			/*border-bottom: none;*/
-		}
+		
+	}
 	}
 	.list {
-		float: left;
-		outline: 2px solid red;
 		width: 655px;
-	li {
-		div {
-			float: left;
-		}
-		input {
-			:before {
-				
+		h4 {
+			margin-bottom: 0;
 			}
-			width: 20px;
-			text-align: center;
+			p {
+			margin-top: 10px;
+			font-size: 12px;
+			color: darken(@grey, 60%);
+			}
+			.list-price {
+/*				display: flex; место для выравнивание цен!!!
+				justify-content: space-between;*/
+			p {
+				margin-left: 110px;
+				font-size: 25px;
+				font-weight: 600;
+				margin-bottom: 16px;
+				span{
+					color: @orange;
+					margin-left: 30px;
+				}
+			}
 		}
-	}
+			ul {
+				padding-left: 0;
+				margin-top: 0;
+				li:last-child{
+				border-bottom: none;
+				}
+				li {
+					margin: 0 30px;
+					display: flex;
+					display: -webkit-flex;
+					-webkit-justify-content: space-between;
+					justify-content: space-between;
+					align-items: flex-end;
+					-webkit-align-items: flex-end;
+					border-bottom: 1px solid darken(@grey, 20%);
+					.calc>a {
+						font-size: 28px;
+						font-weight: 600;
+						color: darken(@grey, 40%);
+						border: none;
+					}
+				input {
+					height: 30px;
+					width: 35px;
+					font-size: 24px;
+					text-align: center;
+					margin-bottom: 16px;
+					color: darken(@grey, 60%);
+					background-color: darken(@grey, 10%);
+					border: 1px solid darken(@grey, 30%);
+				}
+			}
+		}
 	}
 }
 
-.content {
-	/*float: right;*/
-	/*outline: 1px solid;*/
-	width: 950px;
-	height: 1510px;
-	margin-top: 95px;
-	/*margin-right: 13.5%;*/
+/*расчет - наше меню*/
+.raschet {
+	max-width: 890px;
+	height: 315px;
 	margin-right: auto;
 	margin-left: auto;
+	h2 {
+		font-size: 42px;
+		font-weight: 100;
+		margin-top: 0;
+		padding-top: 45px;
+		text-align: center;
+		color: darken(@grey, 70%)
+	}
+	.buttons {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+		.row-button {
+			width: 100%;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+		}
+		.button {
+			width: 350px;
+			height: 50px;
+			border: 1px solid darken(@grey, 40%);
+			margin-bottom: 20px;
+			font-weight: 600;
+			padding-left: 40px;
+			p {
+				margin-top: 15px;
+				position: relative;
+			}
+			span {
+				color: @orange;
+				right: 25px;
+				top: -5px;
+				font-size: 25px;
+				position: absolute;
+			}
+		}
+		.itogo {
+			width: 390px;
+			height: 50px;
+			padding-left: 0;
+			p{
+				margin-top: 15px;
+				font-size: 28px;
+				font-weight: 600;
+				span {
+					color: @orange;
+				}
+			}
+		}
+	}
+}
+/*конец Расчет - наше меню*/
+
+/*заявка - наше меню*/
+.row-zayavka {
+	background-color: #fff;
+}
+.zayavka {
+	height: 410px;
+	width: 885px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	box-sizing: border-box;
+	h2 {
+		text-align: center;
+		font-size: 42px;
+		font-weight: 100;
+		color: darken(@grey, 70%);
+		margin-bottom: 0;
+		}
+		p {
+			text-align: center;
+		}
+		.inputs {
+			display: flex;
+			display: -webkit-flex;
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+			margin-top: 70px;
+			input {
+				width: 280px;
+				height: 40px;
+				border: 1px solid darken(@grey, 30%);
+				font-size: 16px;
+				color: darken(@grey, 100%);
+				padding-left: 20px;
+				box-sizing: border-box;
+			}
+		}
+		button {
+			display: block;
+			background-color: @orange;
+		border: none;;
+		color: #fff;
+		width: 280px;
+		height: 40px;
+		margin-top: 43px;
+		margin-left: 105px;
+		font-size: 16px;
+		cursor: pointer;
+		margin-left: auto;
+		margin-right: auto;
+		}
+		button:hover {
+					  -webkit-transition: all 0.5s ease;
+					  -moz-transition: all 0.5s ease;
+					  -o-transition: all 0.5s ease;
+					  transition: all 0.5s ease;
+						opacity: .85;
+				}
+}
+
+.content { /*наши залы*/
+	max-width: 950px;
+	margin-top: 95px;
+	margin-right: auto;
+	margin-left: auto; /*наши залы*/
+	height: 1600px;
 	.veranda, .karaoke, .family {
 		border: 1px solid @grey;
 		height: 530px;
@@ -240,7 +416,7 @@ section {
 		margin-left: 30px;
 		font-size: 18px;
 		line-height: 25px;
-		margin-right: 10px;
+		margin-right: 30px;
 	}
 	a:hover {
 		border-bottom: none!important;
@@ -262,8 +438,6 @@ section {
 					  -o-transition: all 0.5s ease;
 					  transition: all 0.5s ease;
 						opacity: .85;
-
-						
 				}
 }
 /*конец content*/
@@ -271,7 +445,6 @@ section {
 /*footer*/
 footer {
 	position: relative;
-	margin-top: 90px;
 	height: 313px;
 	border-top: 5px solid @orange;
 	border-bottom: 39px solid @orange;
@@ -287,16 +460,29 @@ footer {
 			margin-top: 35px;
 			margin-right: auto;
 			margin-left: auto;
-			/*outline: 1px solid;*/
+			/*outline: 2px solid;*/
 			height: 100%;
-			width: 1000px;
-			div {
-				float: right;
-				margin-right: 45px;
+			max-width: 950px;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+			.gallery {
+				display: flex;
+				display: -webkit-flex;
+				flex-direction: column;
+				-webkit-flex-direction: column;
+			}
+			.footer-img {
+				display: flex;
+				display: -webkit-flex;
+				flex-direction: row-reverse;
+				-webkit-flex-direction: row-reverse;
 			}
 	}
 	.footer-food {
-
 		width: 222px;
 		height: 136px;
 		margin-right: 6px!important;
@@ -305,7 +491,9 @@ footer {
 			margin: 0;
 			list-style: none;
 			display: flex;
+			display: -webkit-flex;
 			justify-content: space-between;
+			-webkit-justify-content: space-between;
 			li {
 				img:hover {
 					  -webkit-transition: all 0.3s ease;
@@ -320,7 +508,7 @@ footer {
 }
 /*скролл*/
 .scroll-up {
-		position: absolute;
+		position: fixed;
 		display: inline;
     background: url(../img/arrow.png);
     bottom: 18px;
@@ -329,12 +517,13 @@ footer {
     height: 40px;
     line-height: 37px;
     right: 30px;
-    bottom: -20px;
+    bottom: 18px;
     text-align: center;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     width: 40px;
     box-sizing: border-box;
+    display: none;
 }
 /*конец Скролл*/
