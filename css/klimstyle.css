@@ -55,10 +55,11 @@ header .header-line {
 header .row {
   width: 100%;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   /*навигация*/
 }
 header .row .logo {
@@ -74,10 +75,13 @@ header .row ul {
   z-index: 10;
   margin-top: 25px;
   padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  flex-direction: row-reverse;
-  -webkit-flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   /*margin-right: 195px;*/
 }
 header .row ul .active > a {
@@ -111,11 +115,12 @@ article .slider-menu {
   /*Наше меню*/
   max-width: 100%;
   height: 415px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
   border-bottom: 4px solid #e54c2a;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 article .slider-halls h1,
 article .slider-menu h1 {
@@ -141,11 +146,12 @@ article .slider-menu h1 {
   /*Наше меню*/
   max-width: 900px;
   height: 615px;
-  /*	margin-top: 85px;*/
+  /*  margin-top: 85px;*/
   margin-right: auto;
   margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
 }
 .content-menu .red-menu {
   width: 225px;
@@ -193,8 +199,8 @@ article .slider-menu h1 {
   color: #585858;
 }
 .content-menu .list .list-price {
-  /*				display: flex; место для выравнивание цен!!!
-				justify-content: space-between;*/
+  /*        display: flex; место для выравнивание цен!!!
+        justify-content: space-between;*/
 }
 .content-menu .list .list-price p {
   margin-left: 110px;
@@ -215,12 +221,15 @@ article .slider-menu h1 {
 }
 .content-menu .list ul li {
   margin: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  align-items: flex-end;
-  -webkit-align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   border-bottom: 1px solid #bebebe;
 }
 .content-menu .list ul li .calc > a {
@@ -255,19 +264,23 @@ article .slider-menu h1 {
   color: #3f3f3f;
 }
 .raschet .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .raschet .buttons .row-button {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .raschet .buttons .button {
   width: 350px;
@@ -312,7 +325,8 @@ article .slider-menu h1 {
   margin-right: auto;
   margin-left: auto;
   padding-top: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .zayavka h2 {
   text-align: center;
@@ -325,10 +339,12 @@ article .slider-menu h1 {
   text-align: center;
 }
 .zayavka .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 70px;
 }
 .zayavka .inputs input {
@@ -338,7 +354,8 @@ article .slider-menu h1 {
   font-size: 16px;
   color: #000000;
   padding-left: 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .zayavka button {
   display: block;
@@ -356,8 +373,6 @@ article .slider-menu h1 {
 }
 .zayavka button:hover {
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: .85;
 }
@@ -433,8 +448,6 @@ article .slider-menu h1 {
 }
 .content button:hover {
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: .85;
 }
@@ -461,24 +474,34 @@ footer .row {
   /*outline: 2px solid;*/
   height: 100%;
   max-width: 950px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  flex-direction: row-reverse;
-  -webkit-flex-direction: row-reverse;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 footer .row .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 footer .row .footer-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  flex-direction: row-reverse;
-  -webkit-flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 footer .footer-food {
   width: 222px;
@@ -489,15 +512,15 @@ footer .footer-food ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-  justify-content: space-between;
-  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 footer .footer-food ul li img:hover {
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   opacity: .45;
 }
@@ -514,10 +537,10 @@ footer .footer-food ul li img:hover {
   bottom: 18px;
   text-align: center;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+          transform: rotate(-45deg);
   width: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: none;
 }
 /*конец Скролл*/
